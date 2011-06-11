@@ -6,8 +6,20 @@
   <%= render 'layouts/stylesheets' %>
 </head>
 <body>
-
+<div class="container">
+  <div class="logo">
+    <img src="/images/logo.jpg">
+  </div>
+  <nav>
+    <ul>
+      <li class="current">News</li>
+      <li>GRFs</li>
+      <li>Contact</li>
+      <li>About</li>
+    </ul>
+  </nav>
 <%= yield %>
+</div>
 
 </body>
 </html>
