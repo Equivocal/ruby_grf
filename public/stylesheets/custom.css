@@ -1,5 +1,6 @@
 body {
-	background: url('/images/bg_page.jpg') #e2e2e2 repeat-x;
+	background: url('/images/bg_page.jpg') #e2e2e2 repeat-x center;
+	background-position: 0px 0px;
 }
 
 div.container {
@@ -15,6 +16,7 @@ div.logo {
 
 nav {
 	width: 750px;
+	text-align: center;
 }
 
 nav ul {
@@ -24,6 +26,8 @@ nav ul {
 }
 
 nav ul li {
+	width: 110px;
+	text-align: center;
 	list-style-type: none;
 	display: inline-block;
 	color: #6c6c6c;
@@ -33,6 +37,10 @@ nav ul li {
 	letter-spacing: 0.15em;
 	text-shadow: 1px 1px 1px #000;
 	
+}
+
+nav ul li:hover {
+	color: #cacaca;
 }
 
 .current {
