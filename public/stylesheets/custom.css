@@ -20,32 +20,38 @@ nav {
 }
 
 nav ul {
-	padding: 0;
-	margin: 0;
-	height: 31px;
+	margin-top: 6px;
+	list-style: none;
 }
 
 nav ul li {
-	width: 110px;
 	text-align: center;
-	list-style-type: none;
-	display: inline-block;
-	color: #6c6c6c;
-	height: 31px;
+	display: inline;
+	margin: 0 32px;
 	text-transform: uppercase;
 	font-family: "Myriad Pro";
 	letter-spacing: 0.15em;
-	text-shadow: 1px 1px 1px #000;
+	padding: 6px;
 	
 }
 
-nav ul li:hover {
-	color: #cacaca;
+nav ul li.current {
+	background: #121212;
+	border: 1px solid #000;
 }
 
-.current {
-	background: #121212;
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
+nav ul li a {
+	color: #6c6c6c;
+	margin-top: 5px;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #000;
+}
+
+nav ul li a:hover {
+	color: #cacaca;
+	text-decoration: underline;
+}
+
+nav ul li.current a {
 	color: #cacaca;
 }
