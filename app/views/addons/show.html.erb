@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @addon.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @addon.description %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%= @addon.filename %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @addon.location %>
+</p>
+
+<p>
+  <b>Dls:</b>
+  <%= @addon.dls %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @addon.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_addon_path(@addon) %> |
+<%= link_to 'Back', addons_path %>

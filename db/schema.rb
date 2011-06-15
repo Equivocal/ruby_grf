@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110614000817) do
+ActiveRecord::Schema.define(:version => 20110615010925) do
+
+  create_table "addons", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "filename"
+    t.string   "location"
+    t.integer  "dls"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "newsposts", :force => true do |t|
     t.string   "title"

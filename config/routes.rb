@@ -1,4 +1,6 @@
 Grf::Application.routes.draw do
+  resources :addons
+
   resources :users
   resources :newsposts
 
@@ -11,6 +13,7 @@ Grf::Application.routes.draw do
 
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
+  match '/grf', :to => 'addons#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
