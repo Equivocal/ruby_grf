@@ -1,2 +1,4 @@
-<h1>Pages#news</h1>
-<p>Find me in app/views/pages/news.html.erb</p>
+<% @newsposts.each do |np| %>
+<h3><%= np.title %> <small><%= User.find(np.user_id).username %> | <%= np.created_at.strftime("%d/%m/%y") %></small></h3>
+<p><%= np.content %></p>
+<% end %>

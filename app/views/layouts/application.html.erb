@@ -4,22 +4,44 @@
   <title>TTD nugitz</title>
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
+  <script type="text/javascript">
+    function dispDDM() {
+      document.getElementById("menu1").style.visibility = "visible";
+      document.getElementById("menu1").style.left = (getOffset( document.getElementById("GRFs") ).left - 35) + "px";
+      document.getElementById("menu1").style.top = (getOffset( document.getElementById("GRFs") ).top + 23) + "px";
+    }
+
+    function hideDDM() {
+      document.getElementById("menu1").style.visibility = "hidden";
+    }
+
+    function getOffset( el ) {
+      var _x = 0;
+      var _y = 0;
+      while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
+      }
+      return { top: _y, left: _x };
+    }
+  </script>
 </head>
 <body>
 <div class="container">
-  <div class="logo">
-    <img src="/images/logo.png">
-  </div>
-  <nav>
-    <ul>
-      <li class="current"><a href="/">News</a></li>
-      <li><a href="#">GRFs</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
+  <%= render 'layouts/header' %>
+  <div class="content">
 <%= yield %>
+  </div>
+  <div class="rightbar">
+    <%= render 'layouts/sidebar' %>
+  </div>
 </div>
-
+<div id="menu1" class="ddm" onMouseOut="hideDDM()">
+  <ul>
+    <li>u</li>
+    <li>mad?</li>
+  </ul>
+</div>
 </body>
 </html>
