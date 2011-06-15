@@ -1,17 +1,16 @@
 Grf::Application.routes.draw do
   resources :users
-
   resources :newsposts
 
   get "newsposts/new"
-
   get "newsposts/edit"
-
   get "newsposts/show"
-
   get "newsposts/index"
 
   root :to => "pages#news"
+
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
