@@ -3,9 +3,9 @@
   </div>
   <nav>
     <ul>
-      <li class="current"><%= link_to 'News', root_path %></li>
-      <li><%= link_to 'GRFs', grf_path %></li>
-      <li><%= link_to 'Contact', contact_path %></li>
-      <li><%= link_to 'About', about_path %></li>
+      <li class="<%= is_current?("news") %>"><%= link_to 'News', root_path %></li>
+      <li class="<%= is_current?("addons") %>"><%= link_to 'GRFs', grf_path %></li>
+      <li class="<%= is_current?("contact") %>"><%= link_to 'Contact', contact_path %></li>
+      <li class="<%= is_current?("about") %>"><%= link_to 'About', about_path %></li>
     </ul>
   </nav>
